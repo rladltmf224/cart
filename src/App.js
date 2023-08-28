@@ -2,16 +2,20 @@ import logo from "./logo.svg";
 import "./App.css";
 import React, { Component } from "react";
 import axios from "axios"; // 설치 후 import
-
 class App extends Component {
+  componentDidMount() {
+    this.loadItem(); // loadItem 호출
+  }
+
   state = {
     loading: false,
     ItemList: [],
   };
   loadItem = async () => {
     axios
-      .get("./SearchJson.json")
+      .get("dummy/SearchJson.json")
       .then(({ data }) => {
+        console.log("성공", data);
         this.setState({
           loading: true,
           ItemList: data.Item,
@@ -19,7 +23,7 @@ class App extends Component {
       })
       .catch((e) => {
         // API 호출이 실패한 경우
-        console.error(e); // 에러표시
+        console.error(e, "실패"); // 에러표시
         this.setState({
           loading: false,
         });
@@ -27,6 +31,8 @@ class App extends Component {
   };
 
   render() {
+    const { ItemList } = this.state;
+
     return (
       <div className="App">
         <header className="App-header">
