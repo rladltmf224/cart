@@ -1,0 +1,20 @@
+"Item": [
+    {
+        "GoodsCode": "1625717680",
+        "OriginalPrice": "29,800",
+        "SalePrice": "26,230",
+        "GoodsName": "달콤나시(OBWC5266)(갤러리아)",
+        "DiscountRate": "11",
+        "Delivery": {
+            "DeliveryInfo": "조건부무료",
+            "DeliveryText": "배송비 3,000원",
+            "DeliveryType": "GRAY",
+            "ShowDeliveryInfo": true
+         }
+     },
+     {
+        "GoodsCode": "1421117680",
+        "OriginalPrice": "9,800",
+        "SalePrice": "7,700",
+        "GoodsName": "나시(현대)",}
+] 
